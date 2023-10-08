@@ -30,5 +30,6 @@ const markup = images
       </li>`
   )
   .join('');
+// CSS styles added in task-03.html
 
 imgGallery.insertAdjacentHTML('beforeend', markup);
