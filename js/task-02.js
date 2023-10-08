@@ -20,13 +20,11 @@ const ingredients = [
 
 const ingredientsList = document.querySelector('#ingredients');
 
-  const murkup = ingredients
-    .map(ingredient => {
-      const newItem = document.createElement('li');
-      newEl.textContent = ingredient;
-      newEl.classList.add('item');
-      return newItem;
-    })
+const murkup = ingredients.map(ingredient => {
+  const newItem = document.createElement('li');
+  newItem.textContent = ingredient;
+  newItem.classList.add('item');
+  return newItem;
+});
 
 ingredientsList.append(...murkup);
-

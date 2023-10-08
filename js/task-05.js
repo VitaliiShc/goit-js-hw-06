@@ -5,9 +5,14 @@
 
 const nameInput = document.querySelector('#name-input');
 const nameOutput = document.querySelector('#name-output');
+const valueByDefault = nameOutput.textContent;
 
 nameInput.addEventListener('input', onNameInputChange);
 
 function onNameInputChange(event) {
-  nameOutput.textContent = event.currentTarget.value;
+  if (!event.currentTarget.value) {
+    nameOutput.textContent = valueByDefault;
+  } else {
+    nameOutput.textContent = event.currentTarget.value;
+  }
 }
